@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>The Areph | Home </title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta property="og:image" content=""/>
+	<link rel="alternate" type="application/rss+xml" href="https://theareph.github.io/index.xml" title="The Areph" />
+	<meta property="og:url" content="https://theareph.github.io/">
+  <meta property="og:site_name" content="The Areph">
+  <meta property="og:title" content="The Areph">
+  <meta property="og:description" content="hello, this is my blog. - Bobkat">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Areph">
+  <meta name="twitter:description" content="hello, this is my blog. - Bobkat">
+
+        <link href="https://theareph.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://theareph.github.io/css/main.6a0f23ea50fd34b46fee262a5a68e17d458c51a2bc99ba1ba018065de6b180c3.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://theareph.github.io/css/dark.50b57e12d401420df23965fed157368aba37b76df0ecefd0b1ecd4da664f01a0.css" media="(prefers-color-scheme: dark)"  />
+</head>
+
+	<body>
+		<div class="content">
+			<header>
+	<div class="main">
+		<a href="https://theareph.github.io/">The Areph</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">Posts</a>
+		
+		<a href="/index.xml">RSS</a>
+		
+		<a href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+			
+			<main class="list">
+				<div class="site-description"><p>computer stuff</p></div>
+				
+				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/etc/">Everyday Software Configuration</a></h1>
+					<time>May 26, 2025</time>
+					<br><div class="description">
+	
+	<h1 id="linux-everyday-software">Linux Everyday Software</h1>
+<p>Linux has its own set of everyday software, which is largely different than that of Windows and MacOS. My frequently used Linux software often has a developer nature and sometimes a server software taste. Here I&rsquo;m listing a few of those and how I configure them uniquely.</p>
+<h1 id="virtualbox">VirtualBox</h1>
+<p>VirtualBox is a hypervisor on Linux that supports Linux, Windows and some other operating systems. I find it&rsquo;s kind of awkward to pass through the webcam, so I made a simple script to remind myself how to do this:</p>&hellip;
+	
+</div>
+					<a class="readmore" href="/posts/etc/">Read more ⟶</a>
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/dotfiles/">Introduction to My Dotfiles</a></h1>
+					<time>May 25, 2025</time>
+					<br><div class="description">
+	
+	<h1 id="repository">Repository</h1>
+<p>GitHub: <a href="https://github.com/itsbobkat/dotfiles">https://github.com/itsbobkat/dotfiles</a></p>
+<h1 id="what-are-dotfiles">What are dotfiles</h1>
+<p>Dotfiles are conventional config files for UNIX like operating systems. These filenames and directory names start with a leading dot (.), hence the name, dotfiles. In my case, the dotfiles I&rsquo;m sharing are specifically for Linux, but MacOS also conforms to this convention.</p>
+<h1 id="dotfiles-usage">Dotfiles Usage</h1>
+<p>Nowadays, I&rsquo;m a KDE user and don&rsquo;t use the old sway config anymore, so in the repository, what are interesting to you are <code>zshrc</code>, <code>zprofile</code>, <code>gitconfig</code> and <code>config/home-manager</code>.</p>&hellip;
+	
+</div>
+					<a class="readmore" href="/posts/dotfiles/">Read more ⟶</a>
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/zshrc/">My dot zshrc</a></h1>
+					<time>May 17, 2025</time>
+					<br><div class="description">
+	
+	<p>I really don&rsquo;t like the bloated <a href="https://github.com/ohmyzsh/ohmyzsh">oh-my-zsh</a> setup. I&rsquo;d like my shell to be fast and snappy and requires no configuration after the initial setup.</p>
+<p>A lot is going on in my <code>.zshrc</code> (or as a <a href="https://gist.github.com/itsbobkat/ae01c58365701f9205f842a9508d4f24">gist</a>). Enjoy!</p>
+<pre tabindex="0"><code>#!/usr/bin/env zsh
+SAVEHIST=1000000
+HISTFILE=~/.zsh_history
+touch $HISTFILE
+
+export PATH=&#34;$HOME/.bin:$PATH&#34;
+export PATH=&#34;$HOME/.config/emacs/bin:$PATH&#34;
+
+
+export EDITOR=nvim
+
+export PATH=&#34;$HOME/.local/bin:$PATH&#34;
+export PATH=&#34;${GOPATH}/bin:${PATH}&#34;
+export GOPATH=&#34;$HOME/go&#34;
+
+# ------ devenv start
+# zfunc
+ZFUNC_DIR=&#34;$HOME/.config/zsh/zfunc&#34;
+[ -d ${ZFUNC_DIR} ] || mkdir -p ${ZFUNC_DIR}
+fpath+=${ZFUNC_DIR}
+# zfunc
+# ---- ghc
+[ -d &#34;$HOME/.ghcup&#34; ] &amp;&amp; export PATH=&#34;$HOME/.ghcup/bin:$PATH&#34;
+# ---- ghc
+# ---- ASDF VM
+test -x &#34;$(which asdf 2&gt;/dev/null)&#34; &gt;/dev/null 2&gt;&amp;1 &amp;&amp; {
+        export PATH=&#34;${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH&#34;
+        mkdir -p &#34;${ASDF_DATA_DIR:-$HOME/.asdf}/completions&#34;
+        [ -f &#34;${ASDF_DATA_DIR:-$HOME/.asdf}/completions/_asdf&#34; ] || asdf completion zsh &gt; &#34;${ASDF_DATA_DIR:-$HOME/.asdf}/completions/_asdf&#34;
+        fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+}
+# ---- ASDF VM
+# ---- pnpm
+hash pnpm &gt;/dev/null 2&gt;&amp;1 &amp;&amp; {
+        export PNPM_HOME=&#34;$HOME/.local/share/pnpm&#34;
+        case &#34;:$PATH:&#34; in
+                *&#34;:$PNPM_HOME:&#34;*) ;;
+                *) export PATH=&#34;$PNPM_HOME:$PATH&#34; ;;
+        esac
+}
+# ---- pnpm
+
+# ---- yarn
+hash yarn &gt;/dev/null 2&gt;&amp;1 &amp;&amp; {
+        export PATH=&#34;$HOME/.yarn/bin:$PATH&#34;
+}
+# ---- yarn
+
+# ---- direnv
+hash direnv &gt;/dev/null 2&gt;&amp;1 &amp;&amp; {
+        eval &#34;$(direnv hook zsh)&#34;
+}
+# ---- direnv
+
+# ---- python start
+# ----- poetry start
+command -v poetry &gt;/dev/null 2&gt;&amp;1 &amp;&amp; [ ! -f &#34;$HOME/.config/zsh/zfunc/_poetry&#34; ] &amp;&amp; {
+    mkdir -p ~/.config/zsh
+        poetry completions zsh &gt; $HOME/.config/zsh/zfunc/_poetry
+}
+# ----- poetry end
+# ---- python end
+
+# ------ devenv end
+
+autoload -U colors &amp;&amp; colors
+autoload -U compinit &amp;&amp; compinit
+
+
+
+# ---- vi key bindings start
+bindkey -v &#39;^?&#39; backward-delete-char
+export KEYTIMEOUT=1
+bindkey -v
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = &#39;block&#39; ]]; then
+    echo -ne &#39;\e[1 q&#39;
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = &#39;&#39; ]] ||
+       [[ $1 = &#39;beam&#39; ]]; then
+    echo -ne &#39;\e[5 q&#39;
+  fi
+}
+zle -N zle-keymap-select
+zle-line-init() {
+    zle -K viins
+    echo -ne &#34;\e[5 q&#34;
+}
+zle -N zle-line-init
+echo -ne &#39;\e[5 q&#39;
+preexec() { echo -ne &#39;\e[5 q&#39; ;}
+bindkey &#39;^[[P&#39; delete-char
+zstyle &#39;:completion:*&#39; menu select
+zstyle &#39;:completion:*&#39; rehash true
+zmodload zsh/complist
+bindkey -M menuselect &#39;h&#39; vi-backward-char
+bindkey -M menuselect &#39;k&#39; vi-up-line-or-history
+bindkey -M menuselect &#39;l&#39; vi-forward-char
+bindkey -M menuselect &#39;j&#39; vi-down-line-or-history
+# ---- vi key bindings end
+
+
+
+
+# ---- edit command line start
+autoload edit-command-line; zle -N edit-command-line
+bindkey  ^x^e edit-command-line
+# ---- edit command line end
+
+
+# prompt
+autoload -U colors &amp;&amp; colors
+PROMPT=&#34;%B%{$fg[green]%}[%{$fg[green]%}%n%{$fg[green]%}@%{$fg[magenta]%}%M %{$fg[green]%}%~%{$fg[green]%}]%{$reset_color%}%b [RET=%?]&#34;
+PROMPT+=&#34;
+$ &#34;
+export PROMPT
+
+command -v starship &gt;/dev/null 2&gt;&amp;1 &amp;&amp; eval &#34;$(starship init zsh)&#34;
+# prompt
+
+# plugins
+# from home manager
+syntaxhighlight=$HOME/.local/share/zsh/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+[ -f ${syntaxhighlight} ] &amp;&amp; source ${syntaxhighlight}
+# plugins
+
+
+
+
+
+# aliases
+hash bat &gt;/dev/null 2&gt;&amp;1 &amp;&amp; alias cat=&#39;bat -pp&#39;
+alias v=nvim
+alias vv=&#39;NVIM_APPNAME=nvim-ide nvim&#39;
+if hash lsd &gt;/dev/null 2&gt;&amp;1; then
+        alias ll=&#39;lsd -Flah --icon never&#39;
+        alias l=&#39;lsd -Flah --icon never&#39;
+else
+        alias ll=&#39;ls -Flash&#39;
+        alias l=&#39;ls -Flash&#39;
+fi
+alias z=&#39;zathura --fork&#39;
+alias gaa=&#39;git add .&#39;
+alias ..=&#39;cd ..&#39;
+alias ...=&#39;cd ../..&#39;
+alias ....=&#39;cd ../../../&#39;
+# aliases
+
+
+stty -ixon
+
+[ -f &#34;$HOME/.zshrc.local&#34; ] &amp;&amp; source $HOME/.zshrc.local
+</code></pre>&hellip;
+	
+</div>
+					<a class="readmore" href="/posts/zshrc/">Read more ⟶</a>
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/first-post/">First Post</a></h1>
+					<time>May 16, 2025</time>
+					<br><div class="description">
+	
+	<p>This is the first post, thanks.</p>&hellip;
+	
+</div>
+					<a class="readmore" href="/posts/first-post/">Read more ⟶</a>
+				</section>
+				
+				
+
+
+			</main>
+			<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/theareph" rel="me" title="GitHub"><svg class="feather">
+   <use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#github" />
+</svg></a><a class="border"></a></div>
+  <div class="footer-info">
+    2025  © The Areph |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+
+
+		</div>
+		
+	</body>
+</html>
