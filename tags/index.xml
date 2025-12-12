@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on The Areph</title>
+    <title>Tags on ar3ph.github.io</title>
     <link>https://ar3ph.github.io/tags/</link>
-    <description>Recent content in Tags on The Areph</description>
+    <description>Recent content in Tags on ar3ph.github.io</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
-    <copyright>© The Areph</copyright>
-    <lastBuildDate>Sat, 17 May 2025 10:40:15 +0000</lastBuildDate>
+    <language>en</language>
+    <copyright>© 2025 ar3ph</copyright>
     <atom:link href="https://ar3ph.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Shell</title>
-      <link>https://ar3ph.github.io/tags/shell/</link>
-      <pubDate>Sat, 17 May 2025 10:40:15 +0000</pubDate>
-      <guid>https://ar3ph.github.io/tags/shell/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on The Areph</title>
+    <title>Categories on ar3ph.github.io</title>
     <link>https://ar3ph.github.io/categories/</link>
-    <description>Recent content in Categories on The Areph</description>
+    <description>Recent content in Categories on ar3ph.github.io</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
-    <copyright>© The Areph</copyright>
+    <language>en</language>
+    <copyright>© 2025 ar3ph</copyright>
     <atom:link href="https://ar3ph.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
