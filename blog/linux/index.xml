@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on ar3ph.github.io</title>
-    <link>https://ar3ph.github.io/</link>
-    <description>Recent content in Blog on ar3ph.github.io</description>
+    <title>Linux on ar3ph.github.io</title>
+    <link>https://ar3ph.github.io/blog/linux/</link>
+    <description>Recent content in Linux on ar3ph.github.io</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>Copyright © 2025, ar3ph.</copyright>
     <lastBuildDate>Sun, 05 Oct 2025 01:32:20 +0000</lastBuildDate>
-    <atom:link href="https://ar3ph.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ar3ph.github.io/blog/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Boot Debian Desktop Themelessly</title>
       <link>https://ar3ph.github.io/boot-debian-desktop-themelessly/</link>
@@ -36,13 +36,6 @@
       <pubDate>Sat, 20 Sep 2025 21:45:15 +0000</pubDate>
       <guid>https://ar3ph.github.io/one-directory-lounge/</guid>
       <description>&lt;p&gt;The Lounge is a self-hosted IRC web client. I don&amp;rsquo;t find the &lt;a href=&#34;https://thelounge.chat/docs/install-and-upgrade&#34;&gt;official setup guide&lt;/a&gt; very good, so I&amp;rsquo;m doing it differently. Here is what I did. This could also be useful for managing any npm pacakge.&lt;/p&gt;&#xA;&lt;h2 id=&#34;asdf&#34;&gt;asdf&lt;/h2&gt;&#xA;&lt;p&gt;Gotta have Node to run a Node application. &lt;a href=&#34;https://asdf-vm.com&#34;&gt;&lt;code&gt;asdf&lt;/code&gt;&lt;/a&gt; is a version manager for different development tools including Node.js, and I&amp;rsquo;m using it to install node. In fact, I recommend keeping &lt;code&gt;asdf&lt;/code&gt; on your system. It&amp;rsquo;s very handy.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Rusty Symbol Soup</title>
-      <link>https://ar3ph.github.io/rusty-symbol-soup/</link>
-      <pubDate>Mon, 15 Sep 2025 21:45:15 +0000</pubDate>
-      <guid>https://ar3ph.github.io/rusty-symbol-soup/</guid>
-      <description>&lt;p&gt;I have become interested in Rust after watching a few videos about it.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://rust-for-linux.com/&#34;&gt;Rust for Linux&lt;/a&gt; is adding Rust in the Linux kernel, &lt;a href=&#34;https://linuxiac.com/git-heads-toward-3-0-with-rust-as-a-hard-dependency/&#34;&gt;Git&lt;/a&gt; will also be using Rust, and I&amp;rsquo;m trying to learn a bit and use it.&lt;/p&gt;&#xA;&lt;h2 id=&#34;rust-version-management&#34;&gt;Rust Version Management&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;m a fan of &lt;a href=&#34;https://asdf-vm.com&#34;&gt;&lt;code&gt;asdf&lt;/code&gt;&lt;/a&gt; but &lt;code&gt;asdf&lt;/code&gt; doesn&amp;rsquo;t do a good job compared to &lt;a href=&#34;https://rustup.rs/&#34;&gt;&lt;code&gt;rustup&lt;/code&gt;&lt;/a&gt;: &lt;code&gt;asdf&lt;/code&gt; places cargo-installed binaries in the rust installation directory instead of &lt;code&gt;~/.cargo/bin&lt;/code&gt;, making them more difficult to access from the shell. So that concludes it. I&amp;rsquo;m recommending &lt;code&gt;rustup&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Debloating Python Setup</title>
