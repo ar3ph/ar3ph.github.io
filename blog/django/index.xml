@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Django on ar3ph Blog</title>
+    <link>https://ar3ph.github.io/blog/django/</link>
+    <description>Recent content in Django on ar3ph Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2025, ar3ph.</copyright>
+    <lastBuildDate>Thu, 02 Oct 2025 01:45:15 +0000</lastBuildDate>
+    <atom:link href="https://ar3ph.github.io/blog/django/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How You Should Start a Django Project</title>
+      <link>https://ar3ph.github.io/how-you-should-start-a-django-project/</link>
+      <pubDate>Thu, 02 Oct 2025 01:45:15 +0000</pubDate>
+      <guid>https://ar3ph.github.io/how-you-should-start-a-django-project/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.djangoproject.com/&#34;&gt;Django&lt;/a&gt; is a Python web framework with batteries included, but it doesn&amp;rsquo;t include all the batteries. This is a practical guide on how to structure and configure a Django project, with additional packages and my opinions. Some experience with Django is recommended. You can familiarize yourself with the basics using the &lt;a href=&#34;https://docs.djangoproject.com/en/5.2/intro/tutorial01/&#34;&gt;official tutorial&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;inititialize-the-project&#34;&gt;Inititialize the Project&lt;/h2&gt;&#xA;&lt;p&gt;Assuming you have &lt;a href=&#34;https://docs.astral.sh/uv/&#34;&gt;uv&lt;/a&gt; installed, start a virtual package as our project (&lt;code&gt;awesome_site&lt;/code&gt;):&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&lt;/span&gt;&lt;span&gt;uv init --virtual awesome_site&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now delete the default &lt;code&gt;main.py&lt;/code&gt; and create the Django skeleton project:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

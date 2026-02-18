@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wayland on ar3ph Blog</title>
+    <link>https://ar3ph.github.io/blog/wayland/</link>
+    <description>Recent content in Wayland on ar3ph Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2025, ar3ph.</copyright>
+    <lastBuildDate>Fri, 26 Sep 2025 21:45:15 +0000</lastBuildDate>
+    <atom:link href="https://ar3ph.github.io/blog/wayland/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The COSMIC Experience</title>
+      <link>https://ar3ph.github.io/the-cosmic-experience/</link>
+      <pubDate>Fri, 26 Sep 2025 21:45:15 +0000</pubDate>
+      <guid>https://ar3ph.github.io/the-cosmic-experience/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/pop-os/cosmic-epoch&#34;&gt;COSMIC&lt;/a&gt; is a new Wayland compositor and the default desktop environment for &lt;a href=&#34;https://system76.com/pop/&#34;&gt;PopOS&lt;/a&gt; 24.04 and onwards. System76 has just released &lt;a href=&#34;https://github.com/pop-os/cosmic-epoch/releases/tag/epoch-1.0.0-beta.1.1&#34;&gt;COSMIC Epoch 1 Beta&lt;/a&gt;. This is the first beta release of COSMIC. I&amp;rsquo;m trying it out in PopOS 24.04 beta.&lt;/p&gt;&#xA;&lt;p&gt;Upon booting into the ISO, I was dropped into the environment:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://ar3ph.github.io/&#xA;/images/cosmic-experience/full-desktop.png&#34; alt=&#34;full desktop experience&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I had to find the installer using the launcher (couldn&amp;rsquo;t find it in the bottom panel):&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://ar3ph.github.io/&#xA;/images/cosmic-experience/find-installer.png&#34; alt=&#34;find installer&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
