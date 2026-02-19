@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://ar3ph.github.io/images/favicon.png" />
+<title>Lima | ar3ph Blog</title>
+<meta name="title" content="Lima" />
+<meta name="description" content="Introduction
+Lima is a VM tool that&rsquo;s primarily used to run containers on MacOS.
+In essence, Lima just provides you a Linux virtual machine. In reality, Lima is like the WSL2 for MacOS, or an alternative for UTM.
+Running VMs
+First, you install Homebrew. Then do this to spawn an up-to-date ARM64 Debian VM:
+1brew install lima
+2limactl create --name=default template:debian-13 --vm-type=vz
+The virtual machine will start and persist. You get SSH access right away with" />
+<meta name="keywords" content="macos,virtualization,lima," />
+
+
+<meta property="og:url" content="https://ar3ph.github.io/lima/">
+  <meta property="og:site_name" content="ar3ph Blog">
+  <meta property="og:title" content="Lima">
+  <meta property="og:description" content="Introduction Lima is a VM tool that’s primarily used to run containers on MacOS.
+In essence, Lima just provides you a Linux virtual machine. In reality, Lima is like the WSL2 for MacOS, or an alternative for UTM.
+Running VMs First, you install Homebrew. Then do this to spawn an up-to-date ARM64 Debian VM:
+1brew install lima 2limactl create --name=default template:debian-13 --vm-type=vz The virtual machine will start and persist. You get SSH access right away with">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2026-02-19T00:00:15+00:00">
+    <meta property="article:modified_time" content="2026-02-19T00:00:15+00:00">
+    <meta property="article:tag" content="Macos">
+    <meta property="article:tag" content="Virtualization">
+    <meta property="article:tag" content="Lima">
+    <meta property="og:image" content="https://ar3ph.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://ar3ph.github.io/images/share.png">
+  <meta name="twitter:title" content="Lima">
+  <meta name="twitter:description" content="Introduction Lima is a VM tool that’s primarily used to run containers on MacOS.
+In essence, Lima just provides you a Linux virtual machine. In reality, Lima is like the WSL2 for MacOS, or an alternative for UTM.
+Running VMs First, you install Homebrew. Then do this to spawn an up-to-date ARM64 Debian VM:
+1brew install lima 2limactl create --name=default template:debian-13 --vm-type=vz The virtual machine will start and persist. You get SSH access right away with">
+
+
+
+
+  <meta itemprop="name" content="Lima">
+  <meta itemprop="description" content="Introduction Lima is a VM tool that’s primarily used to run containers on MacOS.
+In essence, Lima just provides you a Linux virtual machine. In reality, Lima is like the WSL2 for MacOS, or an alternative for UTM.
+Running VMs First, you install Homebrew. Then do this to spawn an up-to-date ARM64 Debian VM:
+1brew install lima 2limactl create --name=default template:debian-13 --vm-type=vz The virtual machine will start and persist. You get SSH access right away with">
+  <meta itemprop="datePublished" content="2026-02-19T00:00:15+00:00">
+  <meta itemprop="dateModified" content="2026-02-19T00:00:15+00:00">
+  <meta itemprop="wordCount" content="272">
+  <meta itemprop="image" content="https://ar3ph.github.io/images/share.png">
+  <meta itemprop="keywords" content="Macos,Virtualization,Lima">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+<style>
+
+    body {
+        font-size: 1.2em;
+    }
+    #footer {
+        border-top: 1px dotted;
+    }
+    
+    .copyright-owner {
+        font-family: serif;
+    }
+
+</style>
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>ar3ph Blog</h2>
+</a>
+<nav>
+<a href="/">Home</a>
+
+<a href="/blog/">Blog</a>
+
+<a href="https://github.com/ar3ph">GitHub</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>Lima</h1>
+<p>
+  <i>
+    <time datetime='2026-02-19'>
+      19 Feb, 2026
+    </time>
+  </i>
+</p>
+
+<content>
+  <h2 id="introduction">Introduction</h2>
+<p><a href="https://lima-vm.io/">Lima</a> is a VM tool that&rsquo;s primarily used to run containers on MacOS.</p>
+<p>In essence, Lima just provides you a Linux virtual machine. In reality, Lima is like the <a href="https://learn.microsoft.com/en-us/windows/wsl/">WSL2</a> for MacOS, or an alternative for <a href="https://getutm.app/">UTM</a>.</p>
+<h2 id="running-vms">Running VMs</h2>
+<p>First, you install <a href="https://brew.sh/">Homebrew</a>. Then do this to spawn an up-to-date ARM64 Debian VM:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>brew install lima
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>limactl create --name<span style="color:#666">=</span>default template:debian-13 --vm-type<span style="color:#666">=</span>vz
+</span></span></code></pre></div><p>The virtual machine will start and persist. You get SSH access right away with</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>lima
+</span></span></code></pre></div><p>For other programs that need SSH access to the VM, append</p>
+<pre tabindex="0"><code>Include ~/.lima/*/ssh.config
+</code></pre><p>to</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>~/.ssh/config
+</span></span></code></pre></div><p>on the MacOS host, and you will be able to ssh into the default VM with:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ssh lima-default
+</span></span></code></pre></div><h2 id="problems">Problems</h2>
+<h3 id="ssh-config-parsing">SSH Config Parsing</h3>
+<p>This is not a bug in Lima per se. <a href="https://code.visualstudio.com/">VSCode</a>&rsquo;s SSH extension works well with Lima. But <a href="https://vscodium.com/">VSCodium</a> and <a href="https://cursor.com/">VSCode forks</a> that use <a href="https://github.com/jeanp413/open-remote-ssh/"><code>open-remote-ssh</code></a> currently don&rsquo;t support parsing imported SSH hosts (in <code>~/.ssh/config</code>), so you won&rsquo;t be able to see the virutal machines created by Lima in the <code>Remote Explorer</code>.</p>
+<h4 id="solution">Solution</h4>
+<p>Use VSCode for now.</p>
+<h3 id="rosetta-compatibility-issue">Rosetta Compatibility Issue</h3>
+<p>You could add the <code>--rosetta</code> flag while doing <code>limactl create</code> to make it possible to run x86_64 programs on the VM. But with the current Linux kernel, you won&rsquo;t be able to run anything that&rsquo;s x86_64 this way: Rosetta2 has <a href="https://github.com/lima-vm/lima/issues/2891">an issue</a>.</p>
+<h4 id="solution-1">Solution</h4>
+<p>When creating the VM, use Debian 12 (or anything with an old enough Linux kernel) like so:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>limactl create --name<span style="color:#666">=</span>default template:debian-12 --vm-type<span style="color:#666">=</span>vz --rosetta
+</span></span></code></pre></div><p>Containers and statically linked binaries will run well, as long as you don&rsquo;t upgrade the Linux kernel. Dynamically linked applications will need amd64(x86_64) libraries on your VM and that&rsquo;s a topic for another post.</p>
+
+</content>
+
+
+
+<p>
+  
+  <a href="https://ar3ph.github.io/blog/macos/">#Macos</a>
+  
+  <a href="https://ar3ph.github.io/blog/virtualization/">#Virtualization</a>
+  
+  <a href="https://ar3ph.github.io/blog/lima/">#Lima</a>
+  
+</p>
+
+  </main>
+  <footer>
+</footer>
+
+  <div id="footer">
+<p>Copyright 2026 <span class="copyright-owner">ar3ph</span></p>
+
+</div>
+</body>
+
+</html>
