@@ -57,7 +57,7 @@ Running VMs First, you install Homebrew. Then do this to spawn an up-to-date ARM
 1brew install lima 2limactl create --name=default template:debian-13 --vm-type=vz The virtual machine will start and persist. You get SSH access right away with">
   <meta itemprop="datePublished" content="2026-02-19T00:00:15+00:00">
   <meta itemprop="dateModified" content="2026-02-19T00:00:15+00:00">
-  <meta itemprop="wordCount" content="272">
+  <meta itemprop="wordCount" content="270">
   <meta itemprop="image" content="https://ar3ph.github.io/images/share.png">
   <meta itemprop="keywords" content="Macos,Virtualization,Lima">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -265,24 +265,27 @@ Running VMs First, you install Homebrew. Then do this to spawn an up-to-date ARM
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>limactl create --name<span style="color:#666">=</span>default template:debian-13 --vm-type<span style="color:#666">=</span>vz
 </span></span></code></pre></div><p>The virtual machine will start and persist. You get SSH access right away with</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>lima
-</span></span></code></pre></div><p>For other programs that need SSH access to the VM, append</p>
-<pre tabindex="0"><code>Include ~/.lima/*/ssh.config
-</code></pre><p>to</p>
+</span></span></code></pre></div><p>For other programs that need SSH access to the VM, prepend</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-s" data-lang="s"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Include <span style="color:#666">~/</span>.lima<span style="color:#666">/*/</span>ssh.config
+</span></span></code></pre></div><p>to</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>~/.ssh/config
 </span></span></code></pre></div><p>on the MacOS host, and you will be able to ssh into the default VM with:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ssh lima-default
 </span></span></code></pre></div><h2 id="problems">Problems</h2>
-<h3 id="ssh-config-parsing">SSH Config Parsing</h3>
-<p>This is not a bug in Lima per se. <a href="https://code.visualstudio.com/">VSCode</a>&rsquo;s SSH extension works well with Lima. But <a href="https://vscodium.com/">VSCodium</a> and <a href="https://cursor.com/">VSCode forks</a> that use <a href="https://github.com/jeanp413/open-remote-ssh/"><code>open-remote-ssh</code></a> currently don&rsquo;t support parsing imported SSH hosts (in <code>~/.ssh/config</code>), so you won&rsquo;t be able to see the virutal machines created by Lima in the <code>Remote Explorer</code>.</p>
-<h4 id="solution">Solution</h4>
-<p>Use VSCode for now.</p>
 <h3 id="rosetta-compatibility-issue">Rosetta Compatibility Issue</h3>
 <p>You could add the <code>--rosetta</code> flag while doing <code>limactl create</code> to make it possible to run x86_64 programs on the VM. But with the current Linux kernel, you won&rsquo;t be able to run anything that&rsquo;s x86_64 this way: Rosetta2 has <a href="https://github.com/lima-vm/lima/issues/2891">an issue</a>.</p>
-<h4 id="solution-1">Solution</h4>
+<h4 id="solution">Solution</h4>
 <p>When creating the VM, use Debian 12 (or anything with an old enough Linux kernel) like so:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>limactl create --name<span style="color:#666">=</span>default template:debian-12 --vm-type<span style="color:#666">=</span>vz --rosetta
 </span></span></code></pre></div><p>Containers and statically linked binaries will run well, as long as you don&rsquo;t upgrade the Linux kernel. Dynamically linked applications will need amd64(x86_64) libraries on your VM and that&rsquo;s a topic for another post.</p>
-
+<h3 id="ssh-config-parsing">SSH Config Parsing</h3>
+<p>This is not a bug with Lima per se. In <a href="https://code.visualstudio.com/download">VSCode</a>/<a href="https://vscodium.com/">Codium</a> and the <a href="https://cursor.com/">forks</a>, sometimes Lima virtual machines just won&rsquo;t show up in the SSH section in the Remote Explorer.</p>
+<h4 id="solution-1">Solution</h4>
+<p>Make sure the <code>Include</code> directive is at the top of your <code>~/.ssh/config</code> file, like this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-s" data-lang="s"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Include <span style="color:#666">~/</span>.lima<span style="color:#666">/*/</span>ssh.config
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Host my<span style="color:#666">-</span>other<span style="color:#666">-</span>server.com
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    Port <span style="color:#40a070">22</span>
+</span></span></code></pre></div>
 </content>
 
 
