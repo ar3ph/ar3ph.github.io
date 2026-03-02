@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debian on ar3ph Blog</title>
+    <link>https://ar3ph.github.io/blog/debian/</link>
+    <description>Recent content in Debian on ar3ph Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2025, ar3ph.</copyright>
+    <lastBuildDate>Sun, 05 Oct 2025 01:32:20 +0000</lastBuildDate>
+    <atom:link href="https://ar3ph.github.io/blog/debian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Boot Debian Desktop Themelessly</title>
+      <link>https://ar3ph.github.io/boot-debian-desktop-themelessly/</link>
+      <pubDate>Sun, 05 Oct 2025 01:32:20 +0000</pubDate>
+      <guid>https://ar3ph.github.io/boot-debian-desktop-themelessly/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.debian.org/&#34;&gt;Debian Linux&lt;/a&gt; as a desktop OS is amazing, considering how rock-solid it is compared to &lt;a href=&#34;https://www.phoronix.com/news/Ubuntu-Rust-Coreutils-Perf&#34;&gt;Ubuntu&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Perfect as Debian should be, the developers don&amp;rsquo;t make the boot process nice enough. You should be able to remove most of the console texts following the &lt;a href=&#34;https://wiki.archlinux.org/title/Silent_boot&#34;&gt;ArchWiki&lt;/a&gt;. For &lt;code&gt;grub&lt;/code&gt; to boot completely silently and themelessly, there are two more files you need to edit.&lt;/p&gt;&#xA;&lt;p&gt;These two files are &lt;code&gt;/etc/grub.d/10_linux&lt;/code&gt; and &lt;code&gt;/etc/grub.d/05_debian_theme&lt;/code&gt;. In &lt;code&gt;10_linux&lt;/code&gt;, set &lt;code&gt;quiet_boot&lt;/code&gt; and &lt;code&gt;vt_handoff&lt;/code&gt; to &lt;code&gt;&amp;quot;1&amp;quot;&lt;/code&gt;:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

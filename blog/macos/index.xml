@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Macos on ar3ph Blog</title>
+    <link>https://ar3ph.github.io/blog/macos/</link>
+    <description>Recent content in Macos on ar3ph Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2025, ar3ph.</copyright>
+    <lastBuildDate>Thu, 19 Feb 2026 00:00:15 +0000</lastBuildDate>
+    <atom:link href="https://ar3ph.github.io/blog/macos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lima</title>
+      <link>https://ar3ph.github.io/lima/</link>
+      <pubDate>Thu, 19 Feb 2026 00:00:15 +0000</pubDate>
+      <guid>https://ar3ph.github.io/lima/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://lima-vm.io/&#34;&gt;Lima&lt;/a&gt; is a VM tool that&amp;rsquo;s primarily used to run containers on MacOS.&lt;/p&gt;&#xA;&lt;p&gt;In essence, Lima just provides you a Linux virtual machine. In reality, Lima is like the &lt;a href=&#34;https://learn.microsoft.com/en-us/windows/wsl/&#34;&gt;WSL2&lt;/a&gt; for MacOS, or an alternative for &lt;a href=&#34;https://getutm.app/&#34;&gt;UTM&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;running-vms&#34;&gt;Running VMs&lt;/h2&gt;&#xA;&lt;p&gt;First, you install &lt;a href=&#34;https://brew.sh/&#34;&gt;Homebrew&lt;/a&gt;. Then do this to spawn an up-to-date ARM64 Debian VM:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&lt;/span&gt;&lt;span&gt;brew install lima&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2&lt;/span&gt;&lt;span&gt;limactl create --name&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;default template:debian-13 --vm-type&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;vz&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The virtual machine will start and persist. You get SSH access right away with&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
